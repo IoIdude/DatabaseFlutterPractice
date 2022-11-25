@@ -44,21 +44,21 @@
 
 #### Реализация метода onCreateTable:
 
-![alt text](https://github.com/IoIdude/DatabaseFlutterPractice/blob/main/pref/8.jpeg)
+![alt text](https://github.com/IoIdude/DatabaseFlutterPractice/blob/main/pref/8.png)
 
 #### Реализация метода onUpdateTable:
 
-![alt text](https://github.com/IoIdude/DatabaseFlutterPractice/blob/main/pref/9.jpeg)
+![alt text](https://github.com/IoIdude/DatabaseFlutterPractice/blob/main/pref/9.png)
 
 #### Реализация метода onDropDataBase:
 
-![alt text](https://github.com/IoIdude/DatabaseFlutterPractice/blob/main/pref/10.jpeg)
+![alt text](https://github.com/IoIdude/DatabaseFlutterPractice/blob/main/pref/10.png)
 
 #### Реализация метода onInitTable:
 
-![alt text](https://github.com/IoIdude/DatabaseFlutterPractice/blob/main/pref/11.jpeg)
+![alt text](https://github.com/IoIdude/DatabaseFlutterPractice/blob/main/pref/11.png)
 
-![alt text](https://github.com/IoIdude/DatabaseFlutterPractice/blob/main/pref/12.jpeg)
+![alt text](https://github.com/IoIdude/DatabaseFlutterPractice/blob/main/pref/12.png)
 
 ### Вывод: Вывод: в ходе практической работы были реализованы следующие функции:
 

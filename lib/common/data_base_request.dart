@@ -37,9 +37,9 @@ abstract class DataBaseRequest {
   static const String _createTableUser =
       'CREATE TABLE "$tableUser" ("id" INTEGER,"login"	TEXT NOT NULL UNIQUE,"password"	TEXT NOT NULL,"id_role"	INTEGER,FOREIGN KEY("id_role") REFERENCES "Role"("id") ON DELETE CASCADE,PRIMARY KEY("id" AUTOINCREMENT))';
   static const String _createTableSklad =
-      'CREATE TABLE "$tableSklad" ("id" INTEGER,"company_name" TEXT NOT NULL,"product_name" TEXT NOT NULL,"date" DATE NOT NULL, PRIMARY KEY("id" AUTOINCREMENT))';
+      'CREATE TABLE "$tableSklad" ("id" INTEGER,"company_name" TEXT NOT NULL,"product_name" TEXT NOT NULL,"date" DATETIME NOT NULL, PRIMARY KEY("id" AUTOINCREMENT))';
   static const String _createTableBuhgalter =
-      'CREATE TABLE "$tableBuhgalter" ("id" INTEGER,"salary" INTEGER NOT NULL,"date" DATE NOT NULL,"id_role" INTEGER, FOREIGN KEY("id_role") REFERENCES "Role"("id") ON DELETE CASCADE,PRIMARY KEY("id" AUTOINCREMENT))';
+      'CREATE TABLE "$tableBuhgalter" ("id" INTEGER,"salary" INTEGER NOT NULL,"date" DATETIME NOT NULL,"id_role" INTEGER, FOREIGN KEY("id_role") REFERENCES "Role"("id") ON DELETE CASCADE,PRIMARY KEY("id" AUTOINCREMENT))';
   static const String _createTableDostavka =
       'CREATE TABLE "$tableDostavka" ("id" INTEGER,"number_of_house" INTEGER NOT NULL,"name_street" TEXT NOT NULL,"floor" INTEGER NOT NULL,"korpus" INTEGER NOT NULL, PRIMARY KEY("id" AUTOINCREMENT))';
   static const String _createTableTovar =

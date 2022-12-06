@@ -31,7 +31,7 @@ class DataBaseHelper {
         await path_provider.getApplicationDocumentsDirectory();
 
     _pathDB = join(_appDocumentDirectory.path, 'test.db');
-
+    print(_pathDB);
     if (Platform.isLinux || Platform.isWindows || Platform.isMacOS) {
       sqfliteFfiInit();
       database = await databaseFactoryFfi.openDatabase(_pathDB,

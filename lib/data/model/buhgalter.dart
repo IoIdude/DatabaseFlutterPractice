@@ -13,7 +13,7 @@ class Buhgalter extends BuhgalterEntity {
     return {
       'salary': salary,
       'date': date,
-      'id_role': id_role,
+      'id_role': id_role.id,
     };
   }
 

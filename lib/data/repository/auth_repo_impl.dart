@@ -1,10 +1,12 @@
 import 'package:firstprogflutter/common/data_base_request.dart';
+import 'package:firstprogflutter/core/crypto/crypto.dart';
 import 'package:firstprogflutter/core/data_base_helper.dart';
+import 'package:firstprogflutter/core/exception/failure.dart';
 import 'package:firstprogflutter/data/model/user.dart';
 import 'package:firstprogflutter/domain/entity/role_entity.dart';
 import 'package:dartz/dartz.dart';
 import 'package:firstprogflutter/domain/repository/auth_repositories.dart';
-import 'package:sqflite/sqlite_api.dart';
+import 'package:sqflite/sqflite.dart';
 
 class AuthRepositoryImpl implements AuthRepositories {
   final _db = DataBaseHelper.instance.database;
@@ -12,16 +14,17 @@ class AuthRepositoryImpl implements AuthRepositories {
   String table = DataBaseRequest.tableUser;
 
   @override
-  Future<Either<String, RoleEnum>> signIn(String login, String password) async {
+  Future<Either<Failure, RoleEnum>> signIn(
+      String login, String password) async {
     try {
       var user = await _db.query(table, where: 'login = ?', whereArgs: [login]);
 
       if (user.isEmpty) {
-        return const Left('Такого пользователя нет');
+        return Left(AuthUserEmptyFailure());
       }
 
-      if (user.first['password'] != password) {
-        return const Left('Ошибка пароля');
+      if (user.first['password'] != Crypto.crypto(password)) {
+        return Left(AuthPasswordFailure());
       }
 
       return Right(
@@ -29,22 +32,22 @@ class AuthRepositoryImpl implements AuthRepositories {
           (element) => element.id == user.first['id_role'],
         ),
       );
-    } on DatabaseException catch (error) {
-      return const Left('Ошибка базы данных');
+    } on DatabaseException catch (ex) {
+      return Left(FailureImpl(ex.getResultCode()!).error);
     }
   }
 
   @override
-  Future<Either<String, bool>> signUp(String login, String password) async {
+  Future<Either<Failure, bool>> signUp(String login, String password) async {
     try {
-      _db.insert(
+      await _db.insert(
         table,
         User(login: login, id_role: RoleEnum.user, password: password).toMap(),
       );
 
-      return const Right(true);
-    } on DatabaseException catch (error) {
-      return const Left('Ошибка базы данных');
+      return Right(true);
+    } on DatabaseException catch (ex) {
+      return Left(FailureImpl(ex.getResultCode()!).error);
     }
   }
 }

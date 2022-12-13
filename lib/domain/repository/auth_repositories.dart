@@ -1,7 +1,11 @@
-import 'package:dartz/dartz.dart';
+import 'package:firstprogflutter/core/exception/failure.dart';
 import 'package:firstprogflutter/domain/entity/role_entity.dart';
+import 'package:dartz/dartz.dart';
 
 abstract class AuthRepositories {
-  Future<Either<String, RoleEnum>> signIn(String login, String password);
-  Future<Either<String, bool>> signUp(String login, String password);
+  String get table;
+
+  Future<Either<Failure, RoleEnum>> signIn(String login, String password);
+
+  Future<Either<Failure, bool>> signUp(String login, String password);
 }

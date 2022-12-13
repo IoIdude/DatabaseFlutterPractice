@@ -1,73 +1,79 @@
-# Практическая работа №2
+# Практическая работа №3
 
-## Тема: реализовать класс, который отвечает за базу данных
+## Тема: создать авторизацию и регистрацию к базе практической №2
 
-### Цель работы: реализовать следующие функции:
-
-### - init - инициализация базы данных для всех платформ
-
-### - onCreateTable - создание таблиц
-
-### - onUpdateTable - обновление таблиц
-
-### - onInitTable - заполнение таблиц данными
-
-### - onDropDataBase - удаление базы данных
+### Цель работы: реализовать регистрацию и авторизацию пользователя. Каждое поле на экране авторизации и регистрации провалидировать минимум 3 критериями максимум 5. После успешной авторизации перейти на экран в зависимости от роли пользователя. Если авторизация или регистрация не удалась нужно вывести сообщение при помощи Snack Bar. Реализовать хэширование данных.
 
 ### Ход работы:
 
-#### Добавим таблицы в наш проект:
+#### Файл со списком названия страниц:
 
-![alt text](https://github.com/IoIdude/DatabaseFlutterPractice/blob/main/pref/1.png)
+![alt text](https://github.com/IoIdude/DatabaseFlutterPractice/tree/auth/pref/13.png)
 
-#### Пример кода одной из таблиц:
+#### Хэширования пароля:
 
-![alt text](https://github.com/IoIdude/DatabaseFlutterPractice/blob/main/pref/2.png)
+![alt text](https://github.com/IoIdude/DatabaseFlutterPractice/tree/auth/pref/14.png)
 
-#### Добавим файлы с кодом в наш проект для работы с таблицами:
+#### Обработка ошибок:
 
-![alt text](https://github.com/IoIdude/DatabaseFlutterPractice/blob/main/pref/3.png)
+![alt text](https://github.com/IoIdude/DatabaseFlutterPractice/tree/auth/pref/15.png)
 
-#### Пример кода одного из этих файлов:
+#### Кейсы:
 
-![alt text](https://github.com/IoIdude/DatabaseFlutterPractice/blob/main/pref/4.png)
+![alt text](https://github.com/IoIdude/DatabaseFlutterPractice/tree/auth/pref/16.png)
+![alt text](https://github.com/IoIdude/DatabaseFlutterPractice/tree/auth/pref/17.png)
+![alt text](https://github.com/IoIdude/DatabaseFlutterPractice/tree/auth/pref/18.png)
 
-#### Создадим файл со списками запросов:
+#### Предъобъявление методов авторизации и регистрации:
 
-![alt text](https://github.com/IoIdude/DatabaseFlutterPractice/blob/main/pref/5.png)
+![alt text](https://github.com/IoIdude/DatabaseFlutterPractice/tree/auth/pref/21.png)
 
-![alt text](https://github.com/IoIdude/DatabaseFlutterPractice/blob/main/pref/6.png)
+#### Предъобъявление методов пользователя:
 
-#### Реализация метода init:
+![alt text](https://github.com/IoIdude/DatabaseFlutterPractice/tree/auth/pref/22.png)
 
-![alt text](https://github.com/IoIdude/DatabaseFlutterPractice/blob/main/pref/7.png)
+#### Реализация методов авторизации и регистрации:
 
-#### Реализация метода onCreateTable:
+![alt text](https://github.com/IoIdude/DatabaseFlutterPractice/tree/auth/pref/19.png)
 
-![alt text](https://github.com/IoIdude/DatabaseFlutterPractice/blob/main/pref/8.png)
+#### Реализация методов пользователя:
 
-#### Реализация метода onUpdateTable:
+![alt text](https://github.com/IoIdude/DatabaseFlutterPractice/tree/auth/pref/20.png)
 
-![alt text](https://github.com/IoIdude/DatabaseFlutterPractice/blob/main/pref/9.png)
+#### Кейс авторизация:
 
-#### Реализация метода onDropDataBase:
+![alt text](https://github.com/IoIdude/DatabaseFlutterPractice/tree/auth/pref/23.png)
 
-![alt text](https://github.com/IoIdude/DatabaseFlutterPractice/blob/main/pref/10.png)
+#### Код страницы администратора:
 
-#### Реализация метода onInitTable:
+![alt text](https://github.com/IoIdude/DatabaseFlutterPractice/tree/auth/pref/24.png)
 
-![alt text](https://github.com/IoIdude/DatabaseFlutterPractice/blob/main/pref/11.png)
+#### Код страницы пользователя:
 
-![alt text](https://github.com/IoIdude/DatabaseFlutterPractice/blob/main/pref/12.png)
+![alt text](https://github.com/IoIdude/DatabaseFlutterPractice/tree/auth/pref/25.png)
 
-### Вывод: Вывод: в ходе практической работы были реализованы следующие функции:
+#### Код страницы авторизации:
 
-### - init - инициализация базы данных для всех платформ
+![alt text](https://github.com/IoIdude/DatabaseFlutterPractice/tree/auth/pref/26.png)
 
-### - onCreateTable - создание таблиц
+#### Код страницы регистрации:
 
-### - onUpdateTable - обновление таблиц
+![alt text](https://github.com/IoIdude/DatabaseFlutterPractice/tree/auth/pref/27.png)
 
-### - onInitTable - заполнение таблиц данными
+#### Страница регистрации:
 
-### - onDropDataBase - удаление базы данных
+![alt text](https://github.com/IoIdude/DatabaseFlutterPractice/tree/auth/pref/28.png)
+
+#### Страница авторизации:
+
+![alt text](https://github.com/IoIdude/DatabaseFlutterPractice/tree/auth/pref/29.png)
+
+#### Страница пользователя:
+
+![alt text](https://github.com/IoIdude/DatabaseFlutterPractice/tree/auth/pref/30.png)
+
+#### Страница администратора:
+
+![alt text](https://github.com/IoIdude/DatabaseFlutterPractice/tree/auth/pref/31.png)
+
+### Вывод: в ходе практической работы реализовал регистрацию и авторизацию пользователя. Каждое поле на экране авторизации и регистрации провалидировал. После успешной авторизации сделал переход на экран в зависимости от роли пользователя. Если авторизация или регистрация не удалась осуществил вывод сообщения при помощи Snack Bar. Реализовал хэширование данных.
